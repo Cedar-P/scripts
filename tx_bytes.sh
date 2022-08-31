@@ -1,0 +1,6 @@
+#!/bin/sh
+oldtxbytes=$(cat /sys/class/net/eth0/statistics/tx_bytes)
+sleep 1s
+txbytes=$(cat /sys/class/net/eth0/statistics/tx_bytes)
+nettraffic=$(expr $txbytes - $oldtxbytes)
+echo $nettraffic
