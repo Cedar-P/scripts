@@ -1,10 +1,11 @@
 #!/usr/bin/env
 brightval=$(cat ${HOME}/scripts/brightval)
-echo $(expr $brightval - 1) > ${HOME}/scripts/brightval
-if [[ $brightval -ge 10 ]] ; then
-	echo 10 > ${HOME}/scripts/brightval
-elif [[ $brightval -le 0 ]] ; then
+if [[ $brightval == "0.1" ]] || [[ $brightval == "0" ]]; then
 	echo 0 > ${HOME}/scripts/brightval
+elif [[ $brightval == "1" ]] ; then
+	echo 0.9 > ${HOME}/scripts/brightval
+else
+	echo "0.$(expr $(cat ${HOME}/scripts/brightval | sed s/0.//) - 1)" > ${HOME}/scripts/brightval
 fi
-xrandr --output LVDS-1 --brightness $(echo ".${brightval}")
+xrandr --output LVDS-1 --brightness $(cat ${HOME}/scripts/brightval)
 pkill -RTMIN+11 dwmblocks

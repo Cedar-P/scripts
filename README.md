@@ -4,9 +4,11 @@
 
 ### Brightness
 
-This includes scripts that check brightness level, and turn it up and down, as well as send signal 11 to my dwmblocks config.
+This includes scripts to increase and decrease brightness. the file "brightval" is used for permanent storage of what the brightness level should be.
 
 If you won't use this in dwmblocks, remove the parts using pkill.
+
+Dependent on xrandr.
 
 ### Sound
 
