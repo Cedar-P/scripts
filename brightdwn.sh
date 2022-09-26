@@ -7,3 +7,4 @@ elif [[ $brightval -le 0 ]] ; then
 	echo 0 > ${HOME}/scripts/brightval
 fi
 xrandr --output LVDS-1 --brightness $(echo ".${brightval}")
+pkill -RTMIN+11 dwmblocks
