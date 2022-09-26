@@ -1,12 +1,9 @@
-bright=$(cat /sys/class/backlight/intel_backlight/brightness)
-maxbright=$(cat /sys/class/backlight/intel_backlight/max_brightness)
-newbright=$(expr $bright - 120424)
-if [ $newbright -le 0 ]
-then
-	newbright=0
-elif [ $newbright -ge $maxbright ]
-then
-	newbright=$maxbright
+#!/usr/bin/env
+brightval=$(cat ${HOME}/scripts/brightval)
+echo $(expr $brightval - 1) > ${HOME}/scripts/brightval
+if [[ $brightval -ge 10 ]] ; then
+	echo 10 > ${HOME}/scripts/brightval
+elif [[ $brightval -le 0 ]] ; then
+	echo 0 > ${HOME}/scripts/brightval
 fi
-echo $newbright > /sys/class/backlight/intel_backlight/brightness
-pkill -RTMIN+11 dwmblocks
+xrandr --output LVDS-1 --brightness $(echo ".${brightval}")
