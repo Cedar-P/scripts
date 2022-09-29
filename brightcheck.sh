@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/bin/sh
 if [[ $(cat ${HOME}/scripts/brightval) == "1" ]] ; then
 	echo 100%
 else 

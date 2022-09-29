@@ -1,0 +1,11 @@
+#!/bin/sh
+case "$1" in
+	up) 
+		amixer sset Master 5%+
+		;;
+	down)
+		amixer sset Master 5%-
+		;;
+esac
+pkill -RTMIN+10 dwmblocks
+	

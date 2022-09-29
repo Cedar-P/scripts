@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/bin/sh
 brightval=$(cat ${HOME}/scripts/brightval)
 if [[ $brightval == "0.9" ]] || [[ $brightval == "1" ]]; then
 	echo 1 > ${HOME}/scripts/brightval

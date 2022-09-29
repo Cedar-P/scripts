@@ -1,0 +1,5 @@
+#!/bin/sh
+dir=$(pwd)
+cd ${HOME}/wpilib/2022/utility
+./wpilibutility
+cd $dir
