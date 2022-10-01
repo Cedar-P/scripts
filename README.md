@@ -1,10 +1,10 @@
-# My dev/gitstuff/scripts I use for turning lengthy commands into button presses
+# My scripts I use for turning lengthy commands into button presses
 
-## These are the dev/gitstuff/scripts I use in my dwm and dwmblocks config
+## These are the scripts I use in my dwm and dwmblocks config
 
 ### Brightness
 
-This includes dev/gitstuff/scripts to increase and decrease brightness. the file "brightval" is used for permanent storage of what the brightness level should be.
+This includes scripts to increase and decrease brightness. the file "brightval" is used for permanent storage of what the brightness level should be.
 
 If you won't use this in dwmblocks, remove the parts using pkill.
 
