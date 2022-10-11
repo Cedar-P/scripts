@@ -1,14 +1,12 @@
 # My scripts I use for turning lengthy commands into button presses
 
-## These are the scripts I use in my dwm and dwmblocks config
+## These are the scripts I use in my dwm and dwmblocks configs
 
 ### Brightness
 
-This includes scripts to increase and decrease brightness. the file "brightval" is used for permanent storage of what the brightness level should be.
+This includes a script to increase, decrease, and check screen brightness. the file "brightval" is used for permanent storage of what the brightness level should be.
 
 If you won't use this in dwmblocks, remove the parts using pkill.
-
-Dependent on xrandr.
 
 ### Sound
 
@@ -16,7 +14,7 @@ This one's pretty simple. It uses amixer to set the volume and sends signal 10 t
 
 If you're not using my dwmblocks config, you'll want to remove the "pkill -RTMIN+10 dwmblocks"
 
-Dependent on alsa-utils.
+Dependent on alsa and alsa-utils.
 
 ### Net
 
@@ -34,4 +32,4 @@ It is recommended to add this to your path variable so you can just run a comman
 
 To do so, run the command 'PATH=${PATH}:/location/of/scripts' and 'export PATH'
 
-For automated use of this, add the previous commands to your .bashrc or .zshrc or whatever. If you plan on using buttons for these within a window manager, you could add the previous commands to a cron job that runs on startup or into your .xinitrc
+To do this automatically, Append the previous commands listed to your .xinitrc or to a cron job that runs at startup
