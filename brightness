@@ -25,7 +25,7 @@ case "$1" in
 		pkill -RTMIN+11 dwmblocks
 	;;
 	check)
-		if [ ${brightval} == 1 ]; then
+		if [ ${brightval} = 1 ]; then
 			echo 100%
 		else
 			echo $(cat "${HOME}"/dev/gitstuff/scripts/brightval | sed s/0.// )0%
