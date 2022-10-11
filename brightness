@@ -1,0 +1,34 @@
+#!/bin/sh
+brightval=$(cat "${HOME}"/dev/gitstuff/scripts/brightval)
+case "$1" in
+	up)
+		if [ ${brightval} -ge 9 ]; then
+			echo 10 > "${HOME}"/dev/gitstuff/scripts/brightval
+			foo=1
+		else
+			echo $(( $(cat "${HOME}"/dev/gitstuff/scripts/brightval)+1)) > "${HOME}"/dev/gitstuff/scripts/brightval
+			foo=0.$(cat "${HOME}"/dev/gitstuff/scripts/brightval ) 
+		fi
+		xrandr --output LVDS-1 --brightness "${foo}"
+		pkill -RTMIN+11 dwmblocks
+	;;
+
+	down)
+		if [ ${brightval} -le 1 ]; then
+			echo "0" > "${HOME}"/dev/gitstuff/scripts/brightval
+			foo=0
+		else
+			echo $(( $(cat "${HOME}"/dev/gitstuff/scripts/brightval)-1)) > "${HOME}"/dev/gitstuff/scripts/brightval
+			foo=0.$(cat "${HOME}"/dev/gitstuff/scripts/brightval )
+		fi
+		xrandr --output LVDS-1 --brightness "${foo}"
+		pkill -RTMIN+11 dwmblocks
+	;;
+	check)
+		if [ ${brightval} == 1 ]; then
+			echo 100%
+		else
+			echo $(cat "${HOME}"/dev/gitstuff/scripts/brightval | sed s/0.// )0%
+		fi
+	;;
+esac

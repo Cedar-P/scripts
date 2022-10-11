@@ -1,9 +1,0 @@
-#!/bin/sh
-brightval=$(cat ${HOME}/dev/gitstuff/scripts/brightval)
-if [[ $brightval == "0.9" ]] || [[ $brightval == "1" ]]; then
-	echo 1 > ${HOME}/dev/gitstuff/scripts/brightval
-else
-	echo "0.$(expr $(cat ${HOME}/dev/gitstuff/scripts/brightval | sed s/0.//) + 1)" > ${HOME}/dev/gitstuff/scripts/brightval
-fi
-xrandr --output LVDS-1 --brightness $(cat ${HOME}/dev/gitstuff/scripts/brightval)
-pkill -RTMIN+11 dwmblocks

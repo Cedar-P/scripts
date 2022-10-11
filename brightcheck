@@ -1,6 +1,0 @@
-#!/bin/sh
-if [[ $(cat ${HOME}/dev/gitstuff/scripts/brightval) == "1" ]] ; then
-	echo 100%
-else 
-	echo $(cat ${HOME}/dev/gitstuff/scripts/brightval | sed s/0.//)0%
-fi
