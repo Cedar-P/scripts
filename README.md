@@ -22,9 +22,13 @@ This looks at the total amount of bytes received/transferred since the system wa
 
 ### Wpi
 
-This is a very simple script that just opens a window to do something like create a wpilib template and keeps you in the current directory. Very useful for using WPIlib (robotics library used in the international FIRST Robotics competitions for Java and C++) within the terminal. 
+Simple script that open up a window to create a directory for a WPIlib project, or build a directory.
 
 Note: This assumes you are using the latest install of WPIlib and that it is located in your home directory
+
+I am fairly new to the whole robotics thing, and haven't even gotten the .class files to run properly, just compile without error. It is also likely that the build function is missing core functionality, since, again, I am new to this, and my team hasn't started teaching the newer programmers (me) how to use WPIlib yet, so all functionality is based purely off of a small amount of research and testing.
+
+This also only has support for Java currently. When I am more experienced, I will build support for C++
 
 ## Overall note
 

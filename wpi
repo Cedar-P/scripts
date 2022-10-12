@@ -1,5 +1,21 @@
 #!/bin/sh
-dir=$(pwd)
-cd ${HOME}/wpilib/2022/utility
-./wpilibutility
-cd $dir
+case "$1" in
+	create)
+		dir=$(pwd)
+		cd "${HOME}"/wpilib/2022/utility || exit
+		./wpilibutility
+		cd "$dir" || exit
+	;;
+	build)
+		echo "Where is the directory to build? (use '.' for the current directory)"
+		read dir
+		cd "${dir}" || exit
+		./gradlew
+		cp -r "${HOME}"/wpilib/2022/maven/edu/wpi/first/wpilibj/wpilibj-java/2022.4.1/wpilibj-java-2022.4.1.jar "${dir}"/src/main/java
+		cp -r "${HOME}"/wpilib/2022/maven/edu/wpi/first/wpiutil/wpiutil-java/2022.4.1/wpiutil-java-2022.4.1.jar "${dir}"/src/main/java
+		cd "${dir}"/src/main/java || exit
+		jar xf wpilibj-java-2022.4.1.jar
+		jar xf wpiutil-java-2022.4.1.jar
+		javac frc/robot/Main.java
+	;;
+esac
