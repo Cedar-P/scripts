@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 oldrxbytes=$(cat /sys/class/net/eth0/statistics/rx_bytes)
 sleep 1s
 rxbytes=$(cat /sys/class/net/eth0/statistics/rx_bytes)

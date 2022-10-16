@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 brightval=$(cat "${HOME}"/dev/gitstuff/scripts/brightval)
 case "$1" in
 	up)
