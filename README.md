@@ -22,11 +22,11 @@ This looks at the total amount of bytes received/transferred since the system wa
 
 ### Wpi
 
-Simple script that open up a window to create a directory for a WPIlib project, or build a directory.
+Simple script that open up a window to create a directory for a WPIlib project, then build that directory
 
 Note: This assumes you are using the latest install of WPIlib and that it is located in your home directory
 
-I am fairly new to the whole robotics thing, and haven't even gotten the .class files to run properly, just compile without error. It is also likely that the build function is missing core functionality, since, again, I am new to this, and my team hasn't started teaching the newer programmers (me) how to use WPIlib yet, so all functionality is based purely off of a small amount of research and testing.
+I am fairly new to the whole robotics thing, and haven't even gotten the simulation to run properly, just run without error. It is also likely that the build function is missing core functionality, since, again, I am new to this, and my team hasn't started teaching the newer programmers (me) how to use WPIlib yet, so all functionality is based purely off of a small amount of research and testing.
 
 This also only has support for Java currently. When I am more experienced, I will build support for C++
 
