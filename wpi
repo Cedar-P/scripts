@@ -4,8 +4,6 @@ cd "${HOME}"/wpilib/2022/utility || exit
 ./wpilibutility
 cd "$dir" || exit
 echo "Where is the new directory located? (relative path)"
-read newdir
+read -r newdir
 cd "${newdir}" || exit
 ./gradlew build
-cp build/libs/"$(echo ${newdir} | awk '{print $NF}')".jar/src/main/java
-javac frc/robot/Main.java
