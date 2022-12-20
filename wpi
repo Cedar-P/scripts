@@ -3,7 +3,7 @@ dir=$(pwd)
 cd "${HOME}"/wpilib/2022/utility || exit
 ./wpilibutility
 cd "$dir" || exit
-echo "Where is the new directory located? (relative path)"
+echo "Where is the new directory located?"
 read -r newdir
 cd "${newdir}" || exit
 ./gradlew build

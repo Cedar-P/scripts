@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+workingDir=$(pwd)
+cd /home/some-guy/Downloads/Discord || exit
+./Discord
+cd "$workingDir" || exit

@@ -1,6 +1,6 @@
 # My scripts I use for turning lengthy commands into button presses
 
-## These are the scripts I use in my dwm and dwmblocks configs
+## These are the scripts I use in my dwm and dwmblocks configs (and for a few other things)
 
 ### Brightness
 
@@ -27,6 +27,10 @@ Note: This assumes you are using the latest install of WPIlib and that it is loc
 I am fairly new to the whole robotics thing, and haven't even gotten the simulation to run properly, just run without error. It is also likely that the build function is missing core functionality, since, again, I am new to this, and my team hasn't started teaching the newer programmers (me) how to use WPIlib yet, so all functionality is based purely off of a small amount of research and testing.
 
 This also only has support for Java currently. When I am more experienced, I will build support for C++
+
+### Macrand
+
+This script should be run from the terminal (uses read command, could maybe use dmenu for out of terminal) and randomizes your mac address. Currently this only works sometimes due to weird complicated mac address stuff. I'll get to it eventually.
 
 ## Overall note
 
